@@ -29,9 +29,9 @@ info_note: 'Wenn Sie planen, eine PR oder Ausgabe auf GitHub zu erstellen, geben
 no_language: 'Keine Sprache, bitte wähle eine der folgenden Optionen:'
 language_ready: 'Sprache ist schon'
 invalid_language: 'Ungültige Sprache bereitgestellt.'
-invalid_command: 'Kein gültiger Befehl gebe, / discord help ein'
-args_missing: 'Bitte geben Sie eine Nachricht an, um z. / discord send Hi da diese msg ist von mcpe '
-command_disabled: 'Befehl </ discord send> deaktiviert wie in config'
+invalid_command: 'Kein gültiger Befehl gebe, /mcpetodiscord help ein'
+args_missing: 'Bitte geben Sie eine Nachricht an, um z. /mcpetodiscord send Hi da diese msg ist von mcpe '
+command_disabled: 'Befehl </mcpetodiscord send> deaktiviert wie in config'
 send_fail: 'Discord-Nachricht konnte nicht gesendet werden, überprüfen Sie die Konsole auf den vollständigen Fehler.'
 send_success: 'Die Discord Nachricht wurde gesendet!'
 ---

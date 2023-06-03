@@ -29,9 +29,9 @@ info_note: 'Si planea crear un PR o Issue en github, proporcione toda esta infor
 no_language: 'No se ha dicho ningún idioma, elija uno de los siguientes:'
 language_already: 'El idioma ya está'
 invalid_language: 'Idioma no válido proporcionado'.
-invalid_command: 'No es un comando válido try, / discord help'
-args_missing: 'Proporcione un mensaje para enviar, p. / Discord send Hola, este mensaje es de mcpe '
-command_disabled: 'Command </ discord send> disabled como se indica en config'
+invalid_command: 'No es un comando válido try, /mcpetodiscord help'
+args_missing: 'Proporcione un mensaje para enviar, p. /mcpetodiscord send Hola, este mensaje es de mcpe '
+command_disabled: 'Command </mcpetodiscord send> disabled como se indica en config'
 send_fail: 'No se pudo enviar el mensaje de discordia, compruebe el error completo en la consola'.
 send_success: '¡Se envió el mensaje de discordia!'
 ---

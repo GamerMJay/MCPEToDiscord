@@ -29,9 +29,9 @@ info_note: '如果您打算在github上创建PR或问题，请提供所有调试
 no_language: '没有语言，请选择下列之一：'
 language_already: '完成语言准备'
 invalid_language: '提供的语言无效'
-invalid_command: '无效命令尝试，/discord 查看帮助'
-args_missing: '请提供一条信息来发送，如 /discord send 您好这是从mcpe发送的信息'
-command_disabled: '命令</discord send>已按照配置禁用'
+invalid_command: '无效命令尝试，/mcpetodiscord 查看帮助'
+args_missing: '请提供一条信息来发送，如 /mcpetodiscord send 您好这是从mcpe发送的信息'
+command_disabled: '命令</mcpetodiscord send>已按照配置禁用'
 send_fail: 'Discord消息发送失败，完整错误描述参见控制台'
 send_success: 'Discord消息已发送！'
 ---

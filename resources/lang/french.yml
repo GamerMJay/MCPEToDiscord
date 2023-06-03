@@ -29,9 +29,9 @@ info_note: 'Si vous envisagez de créer un PR ou un Issue sur github, veuillez f
 no_language: "Aucune langue trouvée, veuillez choisir l'une des suivantes:"
 language_already: 'La langue est déjà '
 invalid_language: 'Langue invalide fourni.'
-invalid_command: 'Commande invalide essayez, /discord help'
-args_missing: 'Veuillez fournir un message à envoyer. Ex: /discord send Salut là ce msg vennant de mcpe'
-command_disabled: 'Command </discord send> désactivé comme indiqué dans config'
+invalid_command: 'Commande invalide essayez, /mcpetodiscord help'
+args_missing: 'Veuillez fournir un message à envoyer. Ex: /mcpetodiscord send Salut là ce msg vennant de mcpe'
+command_disabled: 'Command </mcpetodiscord send> désactivé comme indiqué dans config'
 send_fail: "Le message Discord n'a pas pu être envoyé, vérifiez la console pour l'erreur complète."
 send_success: 'Le message Discord a été envoyé!'
 ---

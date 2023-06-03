@@ -15,7 +15,7 @@ pureperms_bad: "Pureperms Not found, Support for {nickname} and {rank} will not 
 factions_good: 'FactionsPro was found and loaded !'
 factions_bad: "FactionsPro Not found, Support for {faction} and {fac_rank} will not work."
 
-ingame: 'Command /discord can only be used in-game'
+ingame: 'Command /mcpetodiscord can only be used in-game'
 
 success: 'Success !'
 already_disabled: 'Plugin is already disabled'
@@ -29,9 +29,9 @@ info_note: 'If you plan to create a PR or Issue on github please provide all of 
 no_language: 'No language said please choose one of the following:'
 language_already: 'Language is already '
 invalid_language: 'Invalid language provided.'
-invalid_command: 'Not a valid command try, /discord help'
-args_missing: 'Please provide a message to send e.g. /discord send Hi there this msg is from mcpe'
-command_disabled: 'Command </discord send> disabled as stated in config'
+invalid_command: 'Not a valid command try, /mcpetodiscord help'
+args_missing: 'Please provide a message to send e.g. /mcpetodiscord send Hi there this msg is from mcpe'
+command_disabled: 'Command </mcpetodiscord send> disabled as stated in config'
 send_fail: 'Discord message failed to send, check console for the full error.'
 send_success: 'Discord message was sent!'
 ---
