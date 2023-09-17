@@ -10,7 +10,10 @@ enabled_debug: '插件已启用+已启用调试'
 enabled_defualtlang: '无效语言，检查config.yml，语言被设置为默认语言英语'
 
 pureperms_good: '发现并加载PurePerms！'
-pureperms_bad: '未找到PurePerms，无法支持{nickname}和{rank}'
+pureperms_bad: '未找到PurePerms，无法支持{nickname}和{group}'
+
+ranksystem_good: 'RankSystem was found and loaded !'
+ranksystem_bad: 'RankSystem Not found, Support for {nickname} and {grouprk} will not work.'
 
 factions_good: '发现并加载FactionsPro！'
 factions_bad: '未找到FactionsPro，无法支持{faction}和{fac_rank}'

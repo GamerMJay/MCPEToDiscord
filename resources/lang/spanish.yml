@@ -10,7 +10,10 @@ enabled_debug: 'El complemento está habilitado + depuración habilitada'
 enabled_defualtlang: 'Idioma no válido check config.yml, idioma configurado en inglés como defualt'
 
 pureperms_good: '¡Se encontró y cargó PurePerms!'
-pureperms_bad: 'PurePerms no encontrado, el soporte para {nickname} y {rank} no funcionará'
+pureperms_bad: 'PurePerms no encontrado, el soporte para {nickname} y {group} no funcionará'
+
+ranksystem_good: 'RankSystem was found and loaded !'
+ranksystem_bad: 'RankSystem Not found, Support for {nickname} and {grouprk} will not work.'
 
 factions_good: 'FactionsPro fue encontrado y cargado!'
 factions_bad: 'FactionsPro no encontrado, el soporte para {faction} y {fac_rank} no funcionará'

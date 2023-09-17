@@ -14,11 +14,9 @@ MCPEToDiscord is a plugin to log messages, commands executed and players who Joi
 - <img src="https://avatars.githubusercontent.com/u/52374013" alt="KanekiLeChomeur" height="13" width="13" style="border-radius:50%;"> KanekiLeChomeur(Contributor) (https://github.com/KanekiLeChomeur)
 - <img src="https://avatars.githubusercontent.com/u/65186341" alt="KanekiLeChomeur" height="13" width="13" style="border-radius:50%;"> FlxiBoy1313(Contributor) (https://github.com/Bubbelwubbel)
 
-## What's new in 2.3.1
+## What's new in 2.4.0
 
-- Applied 2.2.2-Beta Patches to PM5 branch and bumping version to 2.3.1
-
-To see changelogs, check it <a href="https://github.com/KanekiLeChomeur/MCPEToDiscord-Patches/blob/master/changelogs.md" alt="Changelogs">here</a>
+- RankSystem support added
 
 
 ### Known Bugs:

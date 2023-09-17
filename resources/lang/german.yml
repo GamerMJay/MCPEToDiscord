@@ -10,7 +10,10 @@ enabled_debug: 'Plugin ist aktiviert + Debug aktiviert'
 enabled_defualtlang: 'Sprache ist ungültig check config.yml, Sprache auf Englisch gesetzt als defualt'
 
 pureperms_good: 'PurePerms wurde gefunden und geladen!'
-pureperms_bad: 'PurePerms wurde nicht gefunden, Support für {nickname} und {rank} wird nicht funktionieren.'
+pureperms_bad: 'PurePerms wurde nicht gefunden, Support für {nickname} und {group} wird nicht funktionieren.'
+
+ranksystem_good: 'RankSystem wurde gefunden und geladen!'
+ranksystem_bad: 'RankSystem wurde nicht gefunden, Support für {nickname} und {grouprk} wird nicht funktionieren.'
 
 factions_good: 'FactionsPro wurde gefunden und geladen!'
 factions_bad: 'FactionsPro nicht gefunden, Support für {faction} und {fac_rank} funktioniert nicht.'

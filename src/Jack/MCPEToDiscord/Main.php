@@ -15,6 +15,8 @@ use pocketmine\console\ConsoleCommandSender;
 use pocketmine\event\player\{PlayerJoinEvent,PlayerQuitEvent, PlayerDeathEvent, PlayerChatEvent};
 use pocketmine\event\server\CommandEvent;
 use pocketmine\VersionInfo;
+use IvanCraft623\RankSystem\rank\Rank;
+use IvanCraft623\RankSystem\RankSystem;
 
 class Main extends PluginBase implements Listener{
 
@@ -30,21 +32,22 @@ class Main extends PluginBase implements Listener{
 
     protected string $version;
     
-    protected string $confversion = "1.1.0";
+    protected string $confversion = "1.2.0";
 
     public $language = "english";
 
     private $pp = null;
 
     private $f = null;
-		
-	public function onEnable(): void {
+
+    private $rk = null;
+    public function onEnable(): void {
         $this->saveResource("config.yml");
         $this->saveResource("help.txt");
         $this->version = $this->getDescription()->getVersion();
         $this->cfg = new Config($this->getDataFolder()."config.yml", Config::YAML);
         if(!$this->cfg->exists("version") || $this->cfg->get("version") !== $this->confversion){
-            $this->getLogger()->info("Your config has an old version, updating your config to a new one. You might set values");
+            $this->getLogger()->error("Your config has an old version, updating your config to a new one. You might set values");
         }
         $this->cfgdata = $this->cfg->getAll();
         $this->language = strtolower($this->cfg->get("language"));
@@ -53,7 +56,7 @@ class Main extends PluginBase implements Listener{
             $this->language = "english";
             $this->getLogger()->error("Wrong language put into the config, setting the language to English.");
         };
-	    $this->saveResource("lang/".$this->language.".yml");
+        $this->saveResource("lang/".$this->language.".yml");
         $this->responses = new Config($this->getDataFolder()."lang/".$this->language.".yml", Config::YAML);
         if($this->cfg->get('debug')){
             $this->getLogger()->info($this->responses->get("enabled_debug"));
@@ -68,6 +71,18 @@ class Main extends PluginBase implements Listener{
             } else {
                 if($this->cfg->get('debug')){
                     $this->getLogger()->info($this->responses->get('pureperms_good'));
+                }
+            }
+        }
+        if($this->cfg->get('ranksystem')){
+            $this->rk = $this->getServer()->getPluginManager()->getPlugin('RankSystem');
+            if($this->rk === null){
+                if($this->cfg->get('debug')){
+                    $this->getLogger()->error($this->responses->get('ranksystem_bad'));
+                }
+            } else {
+                if($this->cfg->get('debug')){
+                    $this->getLogger()->info($this->responses->get('ranksystem_good'));
                 }
             }
         }
@@ -131,7 +146,6 @@ class Main extends PluginBase implements Listener{
             return false;
 	    }
         if(!$sender->hasPermission("mcpetodiscord.use")){
-            $sender->sendMessage("T");
             return false;
         }
 	    switch($args[0]){
@@ -257,6 +271,11 @@ class Main extends PluginBase implements Listener{
             $msg = str_replace("{group}", $tmp->getName(), $msg);
             $msg = str_replace("{nickname}", $event->getPlayer()->getDisplayName(), $msg);
         }
+        if(!is_null($this->rk)){
+            $tmp = $this->rk->getSessionManager()->get($playername)->getHighestRank()->getName();
+            $msg = str_replace("{grouprk}", $tmp, $msg);
+            $msg = str_replace("{nickname}", $event->getPlayer()->getDisplayName(), $msg);
+        }
         if(!is_null($this->f)){
             $fac = $this->f->getFaction($playername);
             $rank = 'Member';
@@ -284,6 +303,11 @@ class Main extends PluginBase implements Listener{
             $msg = str_replace("{group}", $tmp->getName(), $msg);
             $msg = str_replace("{nickname}", $event->getPlayer()->getDisplayName(), $msg);
         }
+        if(!is_null($this->rk)){
+            $tmp = $this->rk->getSessionManager()->get($playername)->getHighestRank()->getName();
+            $msg = str_replace("{grouprk}", $tmp, $msg);
+            $msg = str_replace("{nickname}", $event->getPlayer()->getDisplayName(), $msg);
+        }
         if(!is_null($this->f)){
             $fac = $this->f->getFaction($playername);
             $rank = 'Member';
@@ -309,6 +333,11 @@ class Main extends PluginBase implements Listener{
         if(!is_null($this->pp)){
             $tmp = $this->pp->getUserDataMgr()->getGroup($event->getPlayer());
             $msg = str_replace("{group}", $tmp->getName(), $msg);
+            $msg = str_replace("{nickname}", $event->getPlayer()->getDisplayName(), $msg);
+        }
+        if(!is_null($this->rk)){
+            $tmp = $this->rk->getSessionManager()->get($playername)->getHighestRank()->getName();
+            $msg = str_replace("{grouprk}", $tmp, $msg);
             $msg = str_replace("{nickname}", $event->getPlayer()->getDisplayName(), $msg);
         }
         if(!is_null($this->f)){
@@ -339,6 +368,11 @@ class Main extends PluginBase implements Listener{
         if(!is_null($this->pp)){
             $tmp = $this->pp->getUserDataMgr()->getGroup($event->getPlayer());
             $msg = str_replace("{group}", $tmp->getName(), $msg);
+            $msg = str_replace("{nickname}", $event->getPlayer()->getDisplayName(), $msg);
+        }
+        if(!is_null($this->rk)){
+            $tmp = $this->rk->getSessionManager()->get($playername)->getHighestRank()->getName();
+            $msg = str_replace("{grouprk}", $tmp, $msg);
             $msg = str_replace("{nickname}", $event->getPlayer()->getDisplayName(), $msg);
         }
         if(!is_null($this->f)){

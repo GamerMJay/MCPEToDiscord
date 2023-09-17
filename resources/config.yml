@@ -2,7 +2,7 @@
 
 #Version of the config
 #/!\ Do not edit it /!\
-version: "1.1.0"
+version: "1.2.0"
 
 #Avalaible languages: english, spanish, german, traditional_chinese, simplified_chinese
 language: 'english'
@@ -13,6 +13,10 @@ debug: false
 #Activate the webhook
 discord: true
 
+#Use RankSystem variables
+#{grouprk}, {nickname}
+ranksystem: false
+
 #Use PurePerms variables
 #{group}, {nickname}
 pureperms: false
@@ -22,8 +26,8 @@ pureperms: false
 factions: false
 
 banned_list:
-- '@here'
-- '@everyone'
+  - '@here'
+  - '@everyone'
 webhook_url: "https://discord.com/api/webhooks/"
 webhook_name: "MCPE Webhook"
 webhook_playerChat?: true
