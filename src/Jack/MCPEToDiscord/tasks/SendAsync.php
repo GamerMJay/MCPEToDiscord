@@ -41,9 +41,13 @@ class SendAsync extends AsyncTask
         }
 
         elseif (curl_getinfo($curl, CURLINFO_HTTP_CODE) != 204) {
-            $error = $responsejson['message'];
+            if ($responsejson !== null && isset($responsejson['message'])) {
+                $error = $responsejson['message'];
+            } else {
+                $error = "An unknown error occurred.";
+            }
         }
-
+            
         elseif (curl_getinfo($curl, CURLINFO_HTTP_CODE) == 204 OR $response === ""){
             $success = true;
         }
